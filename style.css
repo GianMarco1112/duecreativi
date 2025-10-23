@@ -1,0 +1,393 @@
+:root {
+    --basicyellow: rgba(246, 250, 94, 1);
+    --basicgreen: rgba(49, 247, 200, 1);
+    --basicblue: rgba(97, 198, 255, 1);
+    --basiclight-blue: rgba(232, 240, 249, 1);
+    --basicdark-blue: rgba(216, 230, 245, 1);
+    --basicwhite: rgba(255, 255, 255, 1);
+    --basicgrey: rgba(172, 172, 172, 1);
+    --basicblack: rgba(13, 13, 13, 1);
+    --menu-font-family: 'Poppins', sans-serif;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #E8F0F9;
+}
+
+/* Navbar */
+.navbar {
+    font-size: larger;
+    padding: 0;
+    /* trasparente */
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+}
+
+.navbar .nav-link {
+    color: var(--basicblack);
+    font-family: var(--menu-font-family);
+    font-size: var(--menu-font-size);
+    font-weight: var(--menu-font-weight);
+    letter-spacing: var(--menu-letter-spacing);
+    line-height: var(--menu-line-height);
+}
+
+/* Navbar “scura” dopo scroll */
+.navbar.scrolled {
+    background-color: rgba(0, 0, 0, 0.3);
+    /* più opaca */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    /* ombra per separazione */
+}
+
+/* Icona dentro il toggler (hamburger) */
+/* Più grande e rotondo */
+.navbar-toggler {
+    padding: 0.75rem;
+    border-radius: 50%;
+    background-color: transparent;
+    /* sfondo trasparente */
+    transition: all 0.3s ease;
+}
+
+/* Al passaggio del mouse */
+.navbar-toggler:hover {
+    background-color: rgba(246, 250, 94, 1);
+}
+
+/* Cambia colore delle tre linee (SVG integrato) */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+/* Pulsante chiudi nell'offcanvas */
+.offcanvas .btn-close {
+    width: 3rem;
+    /* default 1em */
+    height: 3rem;
+    background-size: 1.8rem;
+    /* dimensione X */
+    opacity: 0.8;
+}
+
+/* Offcanvas */
+.offcanvas {
+    --bs-offcanvas-width: 100vw;
+    /* 100% viewport width */
+    max-width: 100vw;
+    background-color: rgba(17, 24, 39, 0.6);
+    /* grigio scuro con 60% opacità */
+    backdrop-filter: blur(10px);
+    /* effetto sfocatura sul contenuto dietro */
+    -webkit-backdrop-filter: blur(10px);
+    /* compatibilità Safari */
+    color: #fff;
+    /* testo chiaro */
+}
+
+.offcanvas-body {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+}
+
+.offcanvas .circle {
+    color: #111;
+}
+
+.circle {
+    background: var(--basicyellow);
+    border-radius: 0 0 100px 100px;
+    font-size: small;
+    width: 130px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-text {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.hero-text h1 {
+    font-size: 8rem;
+    font-weight: 600;
+    color: var(--basicblack);
+    line-height: .9;
+}
+
+.badge-section {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+.badge-btn {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 30px;
+    background-color: var(--basicyellow);
+    color: var(--basicblack);
+    font-weight: 600;
+    border: none;
+    text-decoration: none;
+}
+
+.carousel-item {
+    height: 500px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.parent {
+    margin-top: 60px;
+    height: 640px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 17px;
+}
+
+@media (max-width: 768px) {
+    .parent {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        gap: 30px;
+    }
+}
+
+.div1 {
+    padding: 30px;
+    border-radius: 15px;
+    grid-row: span 5 / span 5;
+    background: var(--basicgreen);
+}
+
+.div2 {
+    padding: 30px;
+    border-radius: 15px;
+    grid-column: span 2 / span 2;
+    grid-row: span 3 / span 3;
+    background: var(--basicwhite);
+}
+
+.div3 {
+    padding: 30px;
+    border-radius: 15px;
+    grid-row: span 2 / span 2;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    background-color: var(--basicyellow);
+}
+
+.div4 {
+    padding: 30px;
+    border-radius: 15px;
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    background-color: var(--basicblue);
+}
+
+.proj-tile {
+    aspect-ratio: 1 / 1;
+    /* quadrato */
+    width: min(100%, 770px);
+    /* max-width 770, ma si adatta */
+    max-height: 770px;
+    /* tetto all'altezza */
+    background: #0f172a;
+    /* fallback mentre carica */
+}
+
+/* L’immagine riempie senza deformarsi */
+.proj-tile>img {
+    object-position: center;
+}
+
+.proj-tile:hover {
+    transform: translateY(-2px);
+    transition: .2s;
+}
+
+.badge-btn2 {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border: 1px solid black;
+    border-radius: 30px;
+    background-color: transparent;
+    color: var(--basicblack);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Input e Textarea minimal */
+.form-control {
+    background: transparent;
+    /* sfondo trasparente */
+    border: none;
+    /* rimuove tutti i bordi */
+    border-bottom: 2px solid #ccc;
+    /* solo linea inferiore */
+    border-radius: 0;
+    /* angoli dritti */
+    color: #fff;
+    /* colore testo */
+    padding: .5rem 0;
+    /* spaziatura verticale */
+    box-shadow: none;
+    /* niente glow */
+    transition: border-color .3s ease, color .3s ease;
+}
+
+.form-check-label {
+    color: #ccc;
+    /* colore etichetta */
+}
+
+.form-control::placeholder {
+    color: #999;
+    /* placeholder grigio */
+    opacity: 1;
+    /* visibile in Firefox */
+}
+
+.form-control:focus {
+    border-color: var(--basicyellow);
+    /* bordo inferiore giallo al focus */
+    box-shadow: none;
+    outline: none;
+    color: #fff;
+}
+
+/* Textarea specifico */
+textarea.form-control {
+    min-height: 120px;
+    /* altezza minima */
+    resize: vertical;
+    /* ridimensionabile solo verticalmente */
+}
+
+.bg-footer {
+    background: var(--basicblack);
+}
+
+.footer-h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+.link-footer {
+    color: white;
+    text-decoration: none;
+}
+
+.cta-footer {
+    background: var(--basicyellow);
+    color: var(--basicblack);
+    border-radius: 20px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.cta-footer h1 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+/* barra scorrevole */
+:root {
+    --ticker-height: 40px;
+    /* altezza barra */
+    --gap: 3rem;
+    /* spazio tra elementi */
+    --speed: 80;
+    /* pixel al secondo */
+    --bg: var(--basicyellow);
+    /* giallo */
+    --text: #111;
+    /* colore del testo */
+}
+
+/* Barra gialla */
+.ticker {
+    height: var(--ticker-height);
+    background: var(--bg);
+    color: var(--text);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+    /* maschera per sfumare i bordi (opzionale) */
+    -webkit-mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0, black 40px, black calc(100% - 40px), transparent 100%);
+}
+
+/* Track che scorre */
+.ticker__track {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: var(--gap);
+    will-change: transform;
+}
+
+.ticker__item {
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-flex;
+    align-items: center;
+}
+
+.dot {
+    width: .5rem;
+    height: .5rem;
+    border-radius: 999px;
+    background: currentColor;
+    display: inline-block;
+    margin: 0 .25rem 0 .5rem;
+    opacity: .35;
+}
+
+
+/* Animazione (il valore di durata viene messo inline via JS) */
+@keyframes ticker-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(var(--scroll-distance, -50%));
+    }
+}
+
+/* Pausa al hover/focus */
+.ticker:hover .ticker__track,
+.ticker:focus-within .ticker__track {
+    animation-play-state: paused;
+}
+
+/* Accessibilità: se l’utente preferisce meno animazioni */
+@media (prefers-reduced-motion: reduce) {
+    .ticker__track {
+        animation: none !important;
+    }
+}
