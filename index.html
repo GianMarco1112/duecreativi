@@ -1,591 +1,856 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-
+  <body>
     <header>
+      <nav class="navbar navbar-expand-lg fixed-top transition-bg">
+        <div class="container">
+          <a class="navbar-brand fw-semibold" href="#">
+            <img src="assets/logo.svg" alt="logo" width="190" />
+          </a>
 
-        <nav class="navbar navbar-expand-lg fixed-top transition-bg">
-            <div class="container">
-                <a class="navbar-brand fw-semibold" href="#">
-                    <img src="assets/logo.svg" alt="logo" width="190">
-                </a>
+          <!-- Toggler visibile sotto lg: apre Offcanvas -->
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navMobile"
+            aria-controls="navMobile"
+            aria-label="Apri menu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-                <!-- Toggler visibile sotto lg: apre Offcanvas -->
-                <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#navMobile" aria-controls="navMobile" aria-label="Apri menu">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <!-- Menu inline da lg in su -->
-                <div class="collapse navbar-collapse">
-                    <ul class="navbar-nav mx-lg-auto d-flex justify-content-around gap-lg-2">
-                        <li class="nav-item"><a class="nav-link" href="#">Progetti</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Servizi</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Chi siamo</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contatti</a></li>
-                    </ul>
-                </div>
-                <div class="circle">
-                    <p class="lh-1">Hai un progetto <br> in mente?
-                        <br><strong>Parliamone!</strong>
-                    </p>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Offcanvas solo per mobile (sotto lg) -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="navMobile" aria-labelledby="navMobileLabel">
-            <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="navMobileLabel">Menu</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-                    aria-label="Chiudi"></button>
-            </div>
-            <div class="offcanvas-body">
-                <ul class="navbar-nav">
-                    <!-- Stessi link del menu desktop -->
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Progetti</a>
-                    </li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Servizi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Chi siamo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#" data-bs-dismiss="offcanvas">Contatti</a></li>
-                </ul>
-                <div class="circle">
-                    <p class="lh-1">Hai un progetto <br> in mente?
-                        <br><strong>Parliamone!</strong>
-                    </p>
-                </div>
-            </div>
-
+          <!-- Menu inline da lg in su -->
+          <div class="collapse navbar-collapse">
+            <ul
+              class="navbar-nav mx-lg-auto d-flex justify-content-around gap-lg-2"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="#">Progetto</a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="#">Servizi</a></li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+              </li>
+            </ul>
+          </div>
+          <div class="circle">
+            <p class="lh-1">
+              Hai un progetto <br />
+              in mente? <br /><strong>Parliamone!</strong>
+            </p>
+          </div>
         </div>
+      </nav>
 
+      <!-- Offcanvas solo per mobile (sotto lg) -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="navMobile"
+        aria-labelledby="navMobileLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="navMobileLabel">Menu</h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="offcanvas"
+            aria-label="Chiudi"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <!-- Stessi link del menu desktop -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+                >Progetti</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+                >Servizi</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+                >Chi siamo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-bs-dismiss="offcanvas"
+                >Contatti</a
+              >
+            </li>
+          </ul>
+          <div class="circle">
+            <p class="lh-1">
+              Hai un progetto <br />
+              in mente? <br /><strong>Parliamone!</strong>
+            </p>
+          </div>
+        </div>
+      </div>
     </header>
 
     <main>
-
-        <!-- HERO SECTION -->
-        <div class="container">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-start align-items-center hero-text">
-                    <h1>
-                        Soluzioni web <br>
-                        moderne, <br>
-                        veloci e <br>
-                        accessibili
-                    </h1>
-                </div>
-            </div>
+      <!-- HERO SECTION -->
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-12 d-flex justify-content-start align-items-center hero-text"
+          >
+            <h1>
+              Soluzioni web <br />
+              moderne, <br />
+              veloci e <br />
+              accessibili
+            </h1>
+          </div>
         </div>
+      </div>
 
-        <!-- BADGE SECTION -->
-        <section class="container my-5">
-            <div class="row row-cols-1 row-cols-lg-2 g-4">
-                <div class="col">
-                    <h5>Agenzia di comunicazione e web</h5>
-                    <div class="badge-buttons d-flex flex-wrap gap-2 my-5">
-                        <a href="#" class="badge-btn">Approccio SEO-first</a>
-                        <a href="#" class="badge-btn">Performance misurabili</a>
-                        <a href="#" class="badge-btn">Tempi rapidi</a>
-                        <a href="#" class="badge-btn">Branding memorabile</a>
-                    </div>
-                </div>
-                <div class="col">
-                    <h4>
-                        Strategia, design e sviluppo per <br> brand distintivi, siti veloci e <br> contenuti che
-                        performano.
-                    </h4>
-                    <br>
-                    <h4>
-                        Niente fronzoli: obbiettivi chiari, <br> risultati misurabili.
-                    </h4>
-                </div>
+      <!-- BADGE SECTION -->
+      <section class="container my-5">
+        <div class="row row-cols-1 row-cols-lg-2 g-4">
+          <div class="col">
+            <h5>Agenzia di comunicazione e web</h5>
+            <div class="badge-buttons d-flex flex-wrap gap-2 my-5">
+              <a href="#" class="badge-btn">Approccio SEO-first</a>
+              <a href="#" class="badge-btn">Performance misurabili</a>
+              <a href="#" class="badge-btn">Tempi rapidi</a>
+              <a href="#" class="badge-btn">Branding memorabile</a>
             </div>
-        </section>
-
-        <!-- CAROUSEL CUSTOM -->
-        <section class="container my-5 p-5 bg-dark rounded-4">
-            <div id="carouselExampleDark" class="carousel carousel-light slide">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="assets/1.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img src="assets/2.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <img src="assets/3.png" class="d-block w-100" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </section>
-
-        <!-- BARRA CHE SCORRE -->
-        <div class="container-fluid">
-            <div class="ticker" aria-label="Tecnologie utilizzate">
-                <div class="ticker__track" id="tickerTrack" role="list" aria-live="polite">
-                    <!-- Modifica/aggiungi qui i nomi delle tecnologie -->
-                    <span class="ticker__item" role="listitem">HTML<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">CSS<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">JavaScript<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">TypeScript<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">React<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">Node.js<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">Express<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">MongoDB<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">PostgreSQL<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">Tailwind CSS<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">Docker<span class="dot"></span></span>
-                    <span class="ticker__item" role="listitem">Git<span class="dot"></span></span>
-                </div>
-            </div>
+          </div>
+          <div class="col">
+            <h4>
+              Strategia, design e sviluppo per <br />
+              brand distintivi, siti veloci e <br />
+              contenuti che performano.
+            </h4>
+            <br />
+            <h4>
+              Niente fronzoli: obbiettivi chiari, <br />
+              risultati misurabili.
+            </h4>
+          </div>
         </div>
+      </section>
 
-        <!-- I NOSTRI SERVIZI -->
-        <section class="container my-5">
-            <div class="row">
-                <div class="col-7 my-4">
-                    <h1>
-                        I nostri servizi
-                    </h1>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui cupiditate optio atque suscipit
-                        reprehenderit recusandae quibusdam nesciunt repellendus culpa tenetur.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- SERVIZI AGGIUNTIVI -->
-        <div class="container text-center bg-white p-4 rounded-4">
-            <div class="row justify-content-start">
-                <div class="col-3">
-                    <img src="assets/logo2.svg" alt="" width="150">
-                </div>
-            </div>
-            <div class="row justify-content-end">
-                <div class="col-3">
-                    <ul class="list-unstyled text-start">
-                        <li>Branding</li>
-                        <li>Logo</li>
-                        <li>Communication</li>
-                        <li>Social networks</li>
-                        <li>Web Design</li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <ul class="list-unstyled text-start">
-                        <li>UI/UX</li>
-                        <li>Website</li>
-                        <li>E-commerce</li>
-                        <li>Hosting manage</li>
-                        <li>Apps</li>
-                    </ul>
-                </div>
-                <div class="col-3">
-                    <ul class="list-unstyled text-start">
-                        <li>SEO</li>
-                        <li>Consulting</li>
-                        <li>Copywriting</li>
-                        <li>Strategy</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- TESTI VARI -->
-        <div class="container my-5">
-            <div class="row justify-content-around align-items-start">
-                <div class="col-6 my-4">
-                    <h3>Servizi pensati per far crescere il tuo business</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque error ducimus quia soluta
-                        quidem, optio magni dolorum officiis sint non et corporis qui molestiae quae.
-                    </p>
-                </div>
-                <div class="col-6 my-4 text-end">
-                    <h1 class="fw-bold">
-                        Un partner <br> al tuo fianco
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- GRIGLIA -->
-        <div class=" container parent my-5">
-
-            <div class="div1 d-flex flex-column justify-content-between">
-                <div>
-                    <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M40 27.5154C57.133 33.3644 75.0416 21.7223 80 1.51155C62.867 -4.33751 44.9586 7.30491 40 27.5154C35.0416 7.30491 17.133 -4.33751 0 1.51155C4.95839 21.7223 22.867 33.3644 40 27.5154Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M0 26.9982C4.95839 47.2087 22.8668 58.8509 39.9998 53.0018C35.0416 32.7913 17.133 21.1491 0 26.9982Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M39.9998 53.0018C57.1327 58.8509 75.0416 47.2087 80 26.9982C62.867 21.1491 44.9584 32.7913 39.9998 53.0018Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M0 52.4848C4.95839 72.6953 22.8668 84.3375 39.9998 78.4884C35.0414 58.278 17.133 46.6358 0 52.4848Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M39.9998 78.4884C57.1327 84.3375 75.0416 72.6953 80 52.4848C62.867 46.6358 44.9584 58.278 39.9998 78.4884Z"
-                            fill="#0D0D0D" />
-                    </svg>
-                </div>
-                <div>
-                    <h3>Web Design</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                    </p>
-                </div>
-            </div>
-
-            <div class="div2 d-flex flex-column justify-content-between">
-                <div>
-                    <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M39.9999 40.0168C17.9085 40.0168 0 57.9181 0 80H79.9998C79.9998 57.9179 62.0914 40.0168 39.9999 40.0168Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M39.9999 39.9834C62.0912 39.9834 80 22.0823 80 0H0C0 22.0823 17.9085 39.9834 39.9999 39.9834Z"
-                            fill="#0D0D0D" />
-                    </svg>
-                </div>
-                <div>
-                    <h3>Branding & Identità</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                    </p>
-                </div>
-            </div>
-
-            <div class="div3 d-flex flex-column justify-content-between">
-                <div>
-                    <svg width="40" height="40" viewBox="0 0 85 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M67.8773 40C77.6473 38.1253 85 29.9751 85 20.2035C85 9.04544 75.4133 0 63.5878 0C52.9893 0 44.2127 7.27245 42.5003 16.8126C40.7878 7.27245 32.0112 0 21.4128 0C9.58674 0 0 9.04544 0 20.2035C0 29.9751 7.35299 38.1253 17.1227 40C7.35274 41.8747 0 50.0251 0 59.7968C0 70.9548 9.58674 80 21.4125 80C32.0107 80 40.7873 72.7278 42.5 63.1876C44.2124 72.7278 52.9891 80 63.5875 80C75.4133 80 84.9997 70.9546 84.9997 59.7968C84.9997 50.0251 77.6473 41.8747 67.8773 40ZM42.5 56.4059C41.0248 48.1883 34.3143 41.6525 25.7023 40C34.3143 38.3475 41.0248 31.8119 42.5 23.5944C43.9752 31.8119 50.686 38.3475 59.298 40C50.686 41.6525 43.9752 48.1883 42.5 56.4059Z"
-                            fill="#0D0D0D" />
-                    </svg>
-
-                </div>
-                <div>
-                    <h3>Contenuti & SEO</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                    </p>
-                </div>
-            </div>
-
-            <div class="div4 d-flex flex-column justify-content-between">
-                <div>
-                    <svg width="40" height="40" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M20.0001 0C8.95432 0 0 8.95431 0 20.0001H40C40 8.95431 31.0457 0 20.0001 0Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M20.0001 20.0001C8.95455 20.0001 0.000239088 28.9542 0.000239088 40H40.0002C40.0002 28.9542 31.0457 20.0001 20.0001 20.0001Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M59.9999 80C71.0457 80 79.9998 71.0457 79.9998 60.0001H39.9998C39.9998 71.0457 48.9543 80 59.9999 80Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M80 40H40.0002C40.0002 51.0456 48.9543 59.9999 59.9999 59.9999C71.0454 59.9999 80 51.0456 80 40Z"
-                            fill="#0D0D0D" />
-                        <path d="M0 60.0001C0 71.0457 8.95431 80 19.9999 80V40C8.95431 40 0 48.9546 0 60.0001Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M20.0001 60.0001C20.0001 71.0457 28.9544 80 40 80L40.0002 40C28.9547 40 20.0001 48.9546 20.0001 60.0001Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M80 20.0001C80 8.95431 71.0459 0 60.0001 0V40.0002C71.0459 40.0002 80 31.0457 80 20.0001Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M59.9999 20.0001C59.9999 8.95431 51.0456 0 40 0L40.0002 40C51.046 40 59.9999 31.0457 59.9999 20.0001Z"
-                            fill="#0D0D0D" />
-                    </svg>
-                </div>
-                <div>
-                    <h3>Apps & Software</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- CHI SIAMO -->
-        <div class="container chiSiamo d-flex text-center justify-content-between bg-white p-4 rounded-4">
-            <div class="col-5 text-start d-flex flex-column justify-content-start">
-                <h1>
-                    Chi siamo
-                </h1>
-                <br>
-                <h6>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui cupiditate optio atque suscipit
-                    reprehenderit recusandae quibusdam nesciunt repellendus culpa tenetur.
-                </h6>
-                <br>
+      <!-- CAROUSEL CUSTOM -->
+      <section class="container my-5 p-5 bg-dark rounded-4">
+        <div id="carouselExampleDark" class="carousel carousel-light slide">
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleDark"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <img src="assets/1.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
                 <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis quae doloribus beatae dicta odit
-                    quam deserunt provident laboriosam maiores sed, qui quisquam possimus earum voluptatibus in quod
-                    excepturi velit minima.
+                  Some representative placeholder content for the first slide.
                 </p>
-                <div class="d-flex gap-3">
-                    <svg width="24" height="24" viewBox="0 0 82 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M82 35.3356H52.5425L73.3721 15.014L66.6106 8.41746L45.781 28.7393V0H36.219V28.7393L15.3894 8.41746L8.6279 15.014L29.4575 35.3356H0V44.6644H29.4575L8.6279 64.986L15.3894 71.5825L36.219 51.261V80H45.781V51.261L66.6106 71.5825L73.3721 64.986L52.5425 44.6644H82V35.3356Z"
-                            fill="#0D0D0D" />
-                    </svg>
-                    <svg width="24" height="24" viewBox="0 0 75 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M34.079 0V80C56.7151 79.7941 75 61.9646 75 40C75 18.0354 56.7151 0.20593 34.079 0Z"
-                            fill="#0D0D0D" />
-                        <path
-                            d="M17.0392 23.5033C7.6291 23.5033 0 30.8888 0 40C0 49.1112 7.6291 56.4967 17.0392 56.4967C26.4492 56.4967 34.079 49.1105 34.079 40C34.079 30.8895 26.4499 23.5033 17.0392 23.5033Z"
-                            fill="#0D0D0D" />
-                    </svg>
-                    <svg width="24" height="24" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M39.9591 0.160558L0.078707 40.1187V79.9212L39.9591 39.963V0.160558Z" fill="#0D0D0D" />
-                        <path d="M40.0405 40.037V79.8406L79.9218 39.8813V0.077941L40.0405 40.037Z" fill="#0D0D0D" />
-                        <path d="M80 0H79.9218V0.077941L80 0Z" fill="#0D0D0D" />
-                        <path d="M40.1192 0H39.9591L39.9591 0.160558L40.1192 0Z" fill="#0D0D0D" />
-                        <path d="M0 80H0.0790956L0.078707 79.9212L0 80Z" fill="#0D0D0D" />
-                        <path d="M39.9591 39.963L39.9591 40.1187L40.0405 40.037V39.8813L39.9591 39.963Z"
-                            fill="#0D0D0D" />
-                        <path d="M39.8813 80H40.0405L40.0405 79.8406L39.8813 80Z" fill="#0D0D0D" />
-                    </svg>
-                </div>
+              </div>
             </div>
-            <div class="col-5">
-                <img class="img-fluid w-100 h-100 object-fit-cover rounded-4" src="assets/chiSiamo.png" alt="chi-siamo">
-            </div>
-        </div>
-
-        <!-- ALCUNI PROGETTI H1 -->
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-end align-items-center text-end">
-                    <h1>
-                        Alcuni <br> progetti
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- GRIGLIA PROGETTI -->
-        <section class="container my-5">
-            <div class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 justify-content-center">
-
-                <!-- Progetto -->
-                <div class="col d-flex flex-column align-items-start">
-                    <a href="#" class="proj-tile d-block rounded-4 overflow-hidden mb-2">
-                        <img src="assets/2.png" alt="Progetto 1" class="w-100 h-100 object-fit-cover d-block">
-                    </a>
-                    <p class="text-secondary small mb-0">Breve descrizione del progetto</p>
-                </div>
-
-                <div class="col d-flex flex-column align-items-start">
-                    <a href="#" class="proj-tile d-block rounded-4 overflow-hidden mb-2">
-                        <img src="assets/4.png" alt="Progetto 2" class="w-100 h-100 object-fit-cover d-block">
-                    </a>
-                    <p class="text-secondary small mb-0">Breve descrizione del progetto</p>
-                </div>
-
-                <div class="col d-flex flex-column align-items-start">
-                    <a href="#" class="proj-tile d-block rounded-4 overflow-hidden mb-2">
-                        <img src="assets/3.png" alt="Progetto 3" class="w-100 h-100 object-fit-cover d-block">
-                    </a>
-                    <p class="text-secondary small mb-0">Breve descrizione del progetto</p>
-                </div>
-
-                <div class="col d-flex flex-column align-items-start">
-                    <a href="#" class="proj-tile d-block rounded-4 overflow-hidden mb-2">
-                        <img src="assets/1.png" alt="Progetto 3" class="w-100 h-100 object-fit-cover d-block">
-                    </a>
-                    <p class="text-secondary small mb-0">Breve descrizione del progetto</p>
-                </div>
-
-                <div class="col d-flex flex-column align-items-start">
-                    <a href="#" class="proj-tile d-block rounded-4 overflow-hidden mb-2">
-                        <img src="assets/2.png" alt="Progetto 3" class="w-100 h-100 object-fit-cover d-block">
-                    </a>
-                    <p class="text-secondary small mb-0">Breve descrizione del progetto</p>
-                </div>
-
-                <!-- ...altre card -->
-            </div>
-        </section>
-
-        <!-- FORM CONTATTO H1 -->
-        <div class="container my-5">
-            <div class="row">
-                <div class="col-12 d-flex justify-content-start align-items-center text-start">
-                    <h1>
-                        Vuoi <br> contattarci?
-                    </h1>
-                </div>
-            </div>
-        </div>
-
-        <!-- FORM -->
-        <section class="container mb-5 bg-white p-4 rounded-4">
-            <form>
-                <h5 class="mb-4">
-                    Compila il form qua di seguito per richiedere <br> informazioni
-                </h5>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="assets/2.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
                 <p>
-                    A che tipologia di servizio sei interessato?
+                  Some representative placeholder content for the second slide.
                 </p>
-                <div class="col w-75">
-                    <div class="badge-buttons d-flex flex-wrap gap-2 my-5">
-                        <a href="#" class="badge-btn2">Web Design</a>
-                        <a href="#" class="badge-btn2">Contenuti & SEO</a>
-                        <a href="#" class="badge-btn2">Apps & Software</a>
-                        <a href="#" class="badge-btn2">Branding & Identità?</a>
-                        <a href="#" class="badge-btn2">Altro</a>
-                    </div>
-                </div>
-                <div class="mb-4 w-75">
-                    <input type="text" class="form-control" id="nome" placeholder="Nome">
-                </div>
-                <div class="mb-4 w-75">
-                    <input type="text" class="form-control" id="cognome" placeholder="Cognome">
-                </div>
-                <div class="mb-4 w-75">
-                    <input type="text" class="form-control" id="telefono" placeholder="Telefono">
-                </div>
-                <div class="mb-4 w-75">
-                    <input type="text" class="form-control" id="azienda" placeholder="Azienda">
-                </div>
-                <div class="mb-4 w-75">
-                    <textarea class="form-control" id="message" rows="4"
-                        placeholder="Descrizione del progetto"></textarea>
-                </div>
-                <div class="mb-4 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">Ho letto e accetto l'informativa sulla privacy e
-                        cookie</label>
-                </div>
-                <button type="submit" class="badge-btn">Invia Richiesta</button>
-            </form>
-        </section>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/3.png" class="d-block w-100" alt="..." />
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleDark"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section>
 
+      <!-- BARRA CHE SCORRE -->
+      <div class="container-fluid">
+        <div class="ticker" aria-label="Tecnologie utilizzate">
+          <div
+            class="ticker__track"
+            id="tickerTrack"
+            role="list"
+            aria-live="polite"
+          >
+            <!-- Modifica/aggiungi qui i nomi delle tecnologie -->
+            <span class="ticker__item" role="listitem"
+              >HTML<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >CSS<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >JavaScript<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >TypeScript<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >React<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >Node.js<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >Express<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >MongoDB<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >PostgreSQL<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >Tailwind CSS<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >Docker<span class="dot"></span
+            ></span>
+            <span class="ticker__item" role="listitem"
+              >Git<span class="dot"></span
+            ></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- I NOSTRI SERVIZI -->
+      <section class="container my-5">
+        <div class="row">
+          <div class="col-7 my-4">
+            <h1>I nostri servizi</h1>
+            <br />
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+              cupiditate optio atque suscipit reprehenderit recusandae quibusdam
+              nesciunt repellendus culpa tenetur.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVIZI AGGIUNTIVI -->
+      <div class="container text-center bg-white p-4 rounded-4">
+        <div class="row justify-content-start">
+          <div class="col-3">
+            <img src="assets/logo2.svg" alt="" width="150" />
+          </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-3">
+            <ul class="list-unstyled text-start">
+              <li>Branding</li>
+              <li>Logo</li>
+              <li>Communication</li>
+              <li>Social networks</li>
+              <li>Web Design</li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="list-unstyled text-start">
+              <li>UI/UX</li>
+              <li>Website</li>
+              <li>E-commerce</li>
+              <li>Hosting manage</li>
+              <li>Apps</li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <ul class="list-unstyled text-start">
+              <li>SEO</li>
+              <li>Consulting</li>
+              <li>Copywriting</li>
+              <li>Strategy</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- TESTI VARI -->
+      <div class="container my-5">
+        <div class="row justify-content-around align-items-start">
+          <div class="col-6 my-4">
+            <h3>Servizi pensati per far crescere il tuo business</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque
+              error ducimus quia soluta quidem, optio magni dolorum officiis
+              sint non et corporis qui molestiae quae.
+            </p>
+          </div>
+          <div class="col-6 my-4 text-end">
+            <h1 class="fw-bold">
+              Un partner <br />
+              al tuo fianco
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRIGLIA -->
+      <div class="container parent my-5">
+        <div class="div1 d-flex flex-column justify-content-between">
+          <div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M40 27.5154C57.133 33.3644 75.0416 21.7223 80 1.51155C62.867 -4.33751 44.9586 7.30491 40 27.5154C35.0416 7.30491 17.133 -4.33751 0 1.51155C4.95839 21.7223 22.867 33.3644 40 27.5154Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M0 26.9982C4.95839 47.2087 22.8668 58.8509 39.9998 53.0018C35.0416 32.7913 17.133 21.1491 0 26.9982Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M39.9998 53.0018C57.1327 58.8509 75.0416 47.2087 80 26.9982C62.867 21.1491 44.9584 32.7913 39.9998 53.0018Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M0 52.4848C4.95839 72.6953 22.8668 84.3375 39.9998 78.4884C35.0414 58.278 17.133 46.6358 0 52.4848Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M39.9998 78.4884C57.1327 84.3375 75.0416 72.6953 80 52.4848C62.867 46.6358 44.9584 58.278 39.9998 78.4884Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3>Web Design</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+
+        <div class="div2 d-flex flex-column justify-content-between">
+          <div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M39.9999 40.0168C17.9085 40.0168 0 57.9181 0 80H79.9998C79.9998 57.9179 62.0914 40.0168 39.9999 40.0168Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M39.9999 39.9834C62.0912 39.9834 80 22.0823 80 0H0C0 22.0823 17.9085 39.9834 39.9999 39.9834Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3>Branding & Identità</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+
+        <div class="div3 d-flex flex-column justify-content-between">
+          <div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 85 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M67.8773 40C77.6473 38.1253 85 29.9751 85 20.2035C85 9.04544 75.4133 0 63.5878 0C52.9893 0 44.2127 7.27245 42.5003 16.8126C40.7878 7.27245 32.0112 0 21.4128 0C9.58674 0 0 9.04544 0 20.2035C0 29.9751 7.35299 38.1253 17.1227 40C7.35274 41.8747 0 50.0251 0 59.7968C0 70.9548 9.58674 80 21.4125 80C32.0107 80 40.7873 72.7278 42.5 63.1876C44.2124 72.7278 52.9891 80 63.5875 80C75.4133 80 84.9997 70.9546 84.9997 59.7968C84.9997 50.0251 77.6473 41.8747 67.8773 40ZM42.5 56.4059C41.0248 48.1883 34.3143 41.6525 25.7023 40C34.3143 38.3475 41.0248 31.8119 42.5 23.5944C43.9752 31.8119 50.686 38.3475 59.298 40C50.686 41.6525 43.9752 48.1883 42.5 56.4059Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3>Contenuti & SEO</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+
+        <div class="div4 d-flex flex-column justify-content-between">
+          <div>
+            <svg
+              width="40"
+              height="40"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M20.0001 0C8.95432 0 0 8.95431 0 20.0001H40C40 8.95431 31.0457 0 20.0001 0Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M20.0001 20.0001C8.95455 20.0001 0.000239088 28.9542 0.000239088 40H40.0002C40.0002 28.9542 31.0457 20.0001 20.0001 20.0001Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M59.9999 80C71.0457 80 79.9998 71.0457 79.9998 60.0001H39.9998C39.9998 71.0457 48.9543 80 59.9999 80Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M80 40H40.0002C40.0002 51.0456 48.9543 59.9999 59.9999 59.9999C71.0454 59.9999 80 51.0456 80 40Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M0 60.0001C0 71.0457 8.95431 80 19.9999 80V40C8.95431 40 0 48.9546 0 60.0001Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M20.0001 60.0001C20.0001 71.0457 28.9544 80 40 80L40.0002 40C28.9547 40 20.0001 48.9546 20.0001 60.0001Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M80 20.0001C80 8.95431 71.0459 0 60.0001 0V40.0002C71.0459 40.0002 80 31.0457 80 20.0001Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M59.9999 20.0001C59.9999 8.95431 51.0456 0 40 0L40.0002 40C51.046 40 59.9999 31.0457 59.9999 20.0001Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+          </div>
+          <div>
+            <h3>Apps & Software</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+              quod.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHI SIAMO -->
+      <div
+        class="container chiSiamo d-flex text-center justify-content-between bg-white p-4 rounded-4"
+      >
+        <div class="col-5 text-start d-flex flex-column justify-content-start">
+          <h1>Chi siamo</h1>
+          <br />
+          <h6>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui
+            cupiditate optio atque suscipit reprehenderit recusandae quibusdam
+            nesciunt repellendus culpa tenetur.
+          </h6>
+          <br />
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
+            quae doloribus beatae dicta odit quam deserunt provident laboriosam
+            maiores sed, qui quisquam possimus earum voluptatibus in quod
+            excepturi velit minima.
+          </p>
+          <div class="d-flex gap-3">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 82 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M82 35.3356H52.5425L73.3721 15.014L66.6106 8.41746L45.781 28.7393V0H36.219V28.7393L15.3894 8.41746L8.6279 15.014L29.4575 35.3356H0V44.6644H29.4575L8.6279 64.986L15.3894 71.5825L36.219 51.261V80H45.781V51.261L66.6106 71.5825L73.3721 64.986L52.5425 44.6644H82V35.3356Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 75 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M34.079 0V80C56.7151 79.7941 75 61.9646 75 40C75 18.0354 56.7151 0.20593 34.079 0Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M17.0392 23.5033C7.6291 23.5033 0 30.8888 0 40C0 49.1112 7.6291 56.4967 17.0392 56.4967C26.4492 56.4967 34.079 49.1105 34.079 40C34.079 30.8895 26.4499 23.5033 17.0392 23.5033Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 80 80"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M39.9591 0.160558L0.078707 40.1187V79.9212L39.9591 39.963V0.160558Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M40.0405 40.037V79.8406L79.9218 39.8813V0.077941L40.0405 40.037Z"
+                fill="#0D0D0D"
+              />
+              <path d="M80 0H79.9218V0.077941L80 0Z" fill="#0D0D0D" />
+              <path
+                d="M40.1192 0H39.9591L39.9591 0.160558L40.1192 0Z"
+                fill="#0D0D0D"
+              />
+              <path d="M0 80H0.0790956L0.078707 79.9212L0 80Z" fill="#0D0D0D" />
+              <path
+                d="M39.9591 39.963L39.9591 40.1187L40.0405 40.037V39.8813L39.9591 39.963Z"
+                fill="#0D0D0D"
+              />
+              <path
+                d="M39.8813 80H40.0405L40.0405 79.8406L39.8813 80Z"
+                fill="#0D0D0D"
+              />
+            </svg>
+          </div>
+        </div>
+        <div class="col-5">
+          <img
+            class="img-fluid w-100 h-100 object-fit-cover rounded-4"
+            src="assets/chiSiamo.png"
+            alt="chi-siamo"
+          />
+        </div>
+      </div>
+
+      <!-- ALCUNI PROGETTI H1 -->
+      <div class="container my-5">
+        <div class="row">
+          <div
+            class="col-12 d-flex justify-content-end align-items-center text-end"
+          >
+            <h1>
+              Alcuni <br />
+              progetti
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- GRIGLIA PROGETTI -->
+      <section class="container my-5">
+        <div
+          class="row row-cols-2 row-cols-md-3 row-cols-xl-4 g-3 justify-content-center"
+        >
+          <!-- Progetto -->
+          <div class="col d-flex flex-column align-items-start">
+            <a
+              href="#"
+              class="proj-tile d-block rounded-4 overflow-hidden mb-2"
+            >
+              <img
+                src="assets/2.png"
+                alt="Progetto 1"
+                class="w-100 h-100 object-fit-cover d-block"
+              />
+            </a>
+            <p class="text-secondary small mb-0">
+              Breve descrizione del progetto
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-start">
+            <a
+              href="#"
+              class="proj-tile d-block rounded-4 overflow-hidden mb-2"
+            >
+              <img
+                src="assets/4.png"
+                alt="Progetto 2"
+                class="w-100 h-100 object-fit-cover d-block"
+              />
+            </a>
+            <p class="text-secondary small mb-0">
+              Breve descrizione del progetto
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-start">
+            <a
+              href="#"
+              class="proj-tile d-block rounded-4 overflow-hidden mb-2"
+            >
+              <img
+                src="assets/3.png"
+                alt="Progetto 3"
+                class="w-100 h-100 object-fit-cover d-block"
+              />
+            </a>
+            <p class="text-secondary small mb-0">
+              Breve descrizione del progetto
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-start">
+            <a
+              href="#"
+              class="proj-tile d-block rounded-4 overflow-hidden mb-2"
+            >
+              <img
+                src="assets/1.png"
+                alt="Progetto 3"
+                class="w-100 h-100 object-fit-cover d-block"
+              />
+            </a>
+            <p class="text-secondary small mb-0">
+              Breve descrizione del progetto
+            </p>
+          </div>
+
+          <div class="col d-flex flex-column align-items-start">
+            <a
+              href="#"
+              class="proj-tile d-block rounded-4 overflow-hidden mb-2"
+            >
+              <img
+                src="assets/2.png"
+                alt="Progetto 3"
+                class="w-100 h-100 object-fit-cover d-block"
+              />
+            </a>
+            <p class="text-secondary small mb-0">
+              Breve descrizione del progetto
+            </p>
+          </div>
+
+          <!-- ...altre card -->
+        </div>
+      </section>
+
+      <!-- FORM CONTATTO H1 -->
+      <div class="container my-5">
+        <div class="row">
+          <div
+            class="col-12 d-flex justify-content-start align-items-center text-start"
+          >
+            <h1>
+              Vuoi <br />
+              contattarci?
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <section class="container mb-5 bg-white p-4 rounded-4">
+        <form>
+          <h5 class="mb-4">
+            Compila il form qua di seguito per richiedere <br />
+            informazioni
+          </h5>
+          <p>A che tipologia di servizio sei interessato?</p>
+          <div class="col w-75">
+            <div class="badge-buttons d-flex flex-wrap gap-2 my-5">
+              <a href="#" class="badge-btn2">Web Design</a>
+              <a href="#" class="badge-btn2">Contenuti & SEO</a>
+              <a href="#" class="badge-btn2">Apps & Software</a>
+              <a href="#" class="badge-btn2">Branding & Identità?</a>
+              <a href="#" class="badge-btn2">Altro</a>
+            </div>
+          </div>
+          <div class="mb-4 w-75">
+            <input
+              type="text"
+              class="form-control"
+              id="nome"
+              placeholder="Nome"
+            />
+          </div>
+          <div class="mb-4 w-75">
+            <input
+              type="text"
+              class="form-control"
+              id="cognome"
+              placeholder="Cognome"
+            />
+          </div>
+          <div class="mb-4 w-75">
+            <input
+              type="text"
+              class="form-control"
+              id="telefono"
+              placeholder="Telefono"
+            />
+          </div>
+          <div class="mb-4 w-75">
+            <input
+              type="text"
+              class="form-control"
+              id="azienda"
+              placeholder="Azienda"
+            />
+          </div>
+          <div class="mb-4 w-75">
+            <textarea
+              class="form-control"
+              id="message"
+              rows="4"
+              placeholder="Descrizione del progetto"
+            ></textarea>
+          </div>
+          <div class="mb-4 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Ho letto e accetto l'informativa sulla privacy e cookie</label
+            >
+          </div>
+          <button type="submit" class="badge-btn">Invia Richiesta</button>
+        </form>
+      </section>
     </main>
 
     <footer>
-        <div class="container-fluid bg-dark footer-section py-5">
+      <div class="container-fluid bg-dark footer-section py-5">
+        <h1 class="footer-h1 text-center">
+          Lorem, ipsum dolor sit amet consectetur.
+        </h1>
 
-            <h1 class="footer-h1 text-center">Lorem, ipsum dolor sit amet consectetur.</h1>
-
-            <div class="container ">
-
-                <div class="row py-4 mx-4">
-
-                    <div class="col-6 text-white">
-                        <h3>
-                            Servizi pensati per far crescere il tuo business
-                        </h3>
-                        <h5>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        </h5>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam eum, corrupti facilis amet
-                            quasi dolores quam.
-                        </p>
-                        <p class="mb-0">
-                            © 2025 duepunticreativi - Tutti i diritti sono riservati.
-                        </p>
-                    </div>
-
-                    <div class="col-6 d-flex flex-column text-white align-items-end">
-                        <a href="#" class="link-footer">Progetti</a>
-                        <a href="#" class="link-footer">Servizi</a>
-                        <a href="#" class="link-footer">Chi siamo</a>
-                        <a href="#" class="link-footer">Contatti</a>
-                        <br>
-                        <a href="#" class="link-footer">Privacy</a>
-                        <a href="#" class="link-footer">Cookie</a>
-                        <br>
-                        <a href="#" class="link-footer">LinkedIn</a>
-                        <a href="#" class="link-footer">Github</a>
-                        <br>
-                        <img src="assets/logo-footer.png" alt="logo2">
-                    </div>
-
-                </div>
-
-                <div class="row cta-footer py-3 my-4">
-
-                    <div class="col-9">
-                        <h1>Hai un idea? <br> <strong>Parliamone!</strong> </h1>
-
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, excepturi.</p>
-                    </div>
-
-                    <div class="col-3 d-flex justify-content-end align-items-center">
-                        <a href="#">
-                            <svg width="100" height="100" viewBox="0 0 200 200" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M91.1626 196.341C93.6001 198.778 96.8001 200.003 100 200.003C103.2 200.003 106.4 198.778 108.838 196.341L196.134 109.044C197.111 108.111 197.937 107.021 198.571 105.814C200.488 102.172 200.481 97.789 198.55 94.1523C197.919 92.9621 197.101 91.8859 196.135 90.963L108.838 3.66563C103.95 -1.22188 96.0501 -1.22188 91.1626 3.66563C86.2751 8.55312 86.2751 16.4531 91.1626 21.3406L157.325 87.5031H12.5C5.6 87.5031 0 93.1031 0 100.003C0 106.903 5.6 112.503 12.5 112.503H157.325L91.1626 178.666C86.2751 183.553 86.2751 191.453 91.1626 196.341Z"
-                                    fill="#0D0D0D" />
-                            </svg>
-                        </a>
-                    </div>
-
-                </div>
-
+        <div class="container">
+          <div class="row py-4 mx-4">
+            <div class="col-6 text-white">
+              <h3>Servizi pensati per far crescere il tuo business</h3>
+              <h5>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h5>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+                eum, corrupti facilis amet quasi dolores quam.
+              </p>
+              <p class="mb-0">
+                © 2025 duepunticreativi - Tutti i diritti sono riservati.
+              </p>
             </div>
 
+            <div class="col-6 d-flex flex-column text-white align-items-end">
+              <a href="#" class="link-footer">Progetti</a>
+              <a href="#" class="link-footer">Servizi</a>
+              <a href="#" class="link-footer">Chi siamo</a>
+              <a href="#" class="link-footer">Contatti</a>
+              <br />
+              <a href="#" class="link-footer">Privacy</a>
+              <a href="#" class="link-footer">Cookie</a>
+              <br />
+              <a href="#" class="link-footer">LinkedIn</a>
+              <a href="#" class="link-footer">Github</a>
+              <br />
+              <img src="assets/logo-footer.png" alt="logo2" />
+            </div>
+          </div>
+
+          <div class="row cta-footer py-3 my-4">
+            <div class="col-9">
+              <h1>
+                Hai un idea? <br />
+                <strong>Parliamone!</strong>
+              </h1>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero,
+                excepturi.
+              </p>
+            </div>
+
+            <div class="col-3 d-flex justify-content-end align-items-center">
+              <a href="#">
+                <svg
+                  width="100"
+                  height="100"
+                  viewBox="0 0 200 200"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M91.1626 196.341C93.6001 198.778 96.8001 200.003 100 200.003C103.2 200.003 106.4 198.778 108.838 196.341L196.134 109.044C197.111 108.111 197.937 107.021 198.571 105.814C200.488 102.172 200.481 97.789 198.55 94.1523C197.919 92.9621 197.101 91.8859 196.135 90.963L108.838 3.66563C103.95 -1.22188 96.0501 -1.22188 91.1626 3.66563C86.2751 8.55312 86.2751 16.4531 91.1626 21.3406L157.325 87.5031H12.5C5.6 87.5031 0 93.1031 0 100.003C0 106.903 5.6 112.503 12.5 112.503H157.325L91.1626 178.666C86.2751 183.553 86.2751 191.453 91.1626 196.341Z"
+                    fill="#0D0D0D"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
 
-
-
-    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous">
-        </script>
+    <script
+      src=" https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
