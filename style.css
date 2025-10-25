@@ -143,8 +143,8 @@ body {
     border-radius: 30px;
     background-color: var(--basicyellow);
     color: var(--basicblack);
+    border: 1px solid black;
     font-weight: 600;
-    border: none;
     text-decoration: none;
 }
 
